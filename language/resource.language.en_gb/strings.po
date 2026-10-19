@@ -2618,3 +2618,8 @@ msgstr ""
 msgctxt "#31636"
 msgid "List Square"
 msgstr ""
+
+#: /1080i/Includes_SkinSettings.xml
+msgctxt "#31637"
+msgid "Trailer provider"
+msgstr ""

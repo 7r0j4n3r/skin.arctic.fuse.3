@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <expression name="Exp_Trailer_UseIMDb">[Skin.HasSetting(Trailer.UseIMDb) + System.AddonIsEnabled(plugin.video.imdb.trailers) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + [String.StartsWith(ListItem.UniqueID(imdb),tt) | String.StartsWith(ListItem.IMDBNumber,tt) | String.StartsWith(Window(Home).Property(TMDbHelper.ListItem.IMDBNumber),tt)]]</expression>
+
     <!-- ========== -->
     <!-- TMDBHelper -->
     <!-- ========== -->
