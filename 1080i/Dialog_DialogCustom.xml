@@ -127,11 +127,8 @@
         <definition>
             <include content="List_Dialog">
                 <param name="id">$PARAM[id]</param>
-                <param name="control">fixedlist</param>
                 <param name="item_height">128</param>
                 <param name="itemlayout_include">List_Layout_Dialog_DetailedCheckmark</param>
-                <focusposition>2</focusposition>
-                <movement>2</movement>
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
                 <onright>$PARAM[scrollbarid]</onright>
                 <include>Size_Grouplist_Pad</include>
