@@ -2,7 +2,7 @@
 <window type="dialog" id="1122">
 
     <defaultcontrol always="true">450</defaultcontrol>
-    <onload>SetProperty(TMDbHelper.ContextMenu,True)</onload>
+    <onload>SetProperty(TMDbHelper.ServicePause,True)</onload>
     <controls>
         <include>DialogCustom_Trailers</include>
     </controls>
