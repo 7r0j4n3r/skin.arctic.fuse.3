@@ -3,7 +3,7 @@
 
     <defaultcontrol always="true">450</defaultcontrol>
     <onload>SetProperty(TMDbHelper.ContextMenu,True)</onload>
-    <onload condition="String.IsEmpty(Window(Home).Property(PlayTrailerItems)) | String.IsEqual(Window(Home).Property(PlayTrailerItems),-)">Close</onload>
+    <onload>AlarmClock(TrailerRefocus,SetFocus(450,0,absolute),00:00,silent)</onload>
     <controls>
         <include>DialogCustom_Trailers</include>
     </controls>

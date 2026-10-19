@@ -2619,7 +2619,7 @@ msgctxt "#31636"
 msgid "List Square"
 msgstr ""
 
-#: /1080i/Includes_SkinSettings.xml
+#: /1080i/Dialog_DialogCustom.xml
 msgctxt "#31637"
-msgid "Trailer provider"
+msgid "Trailer source"
 msgstr ""

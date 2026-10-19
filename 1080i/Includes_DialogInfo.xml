@@ -1476,22 +1476,10 @@
         <item>
             <icon>special://skin/extras/icons/video.png</icon>
             <label>$LOCALIZE[31393]</label>
-            <onclick>Dialog.Close(1172,true)</onclick>
-            <onclick condition="$EXP[Exp_Trailer_UseIMDb]">SetProperty(PlayTrailer,$VAR[Path_VideoInfo_IMDbTrailer],Home)</onclick>
-            <onclick condition="$EXP[Exp_Trailer_UseIMDb]">SetProperty(PlayTrailerTitle,$VAR[Label_Title],Home)</onclick>
-            <onclick condition="$EXP[Exp_Trailer_UseIMDb]">SetProperty(PlayTrailerItems,$VAR[Path_VideoInfo_Trailers],Home)</onclick>
-            <onclick condition="$EXP[Exp_Trailer_UseIMDb]">ActivateWindow(1123)</onclick>
-            <include content="Action_PlayTrailer_OnClick">
-                <param name="enabled">!$EXP[Exp_Trailer_UseIMDb]</param>
-                <param name="trailer">ListItem.Trailer</param>
-                <param name="trailer_fallback">Window(Home).Property(TMDbHelper.ListItem.Trailer)</param>
-                <param name="title">$VAR[Label_Title]</param>
-                <param name="items">$VAR[Path_VideoInfo_Trailers]</param>
-            </include>
-            <visible>$EXP[Exp_Trailer_UseIMDb] | !String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer))</visible>
+            <include>Action_SelectTrailerSource_OnClick</include>
+            <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_trailer)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer)) | $EXP[Exp_Trailer_HasIMDb] | $EXP[Exp_Trailer_HasTMDbHelper]</visible>
         </item>
     </include>
-
     <include name="DialogInfo_VideoButtons_Trakt">
         <item>
             <label>Trakt</label>
